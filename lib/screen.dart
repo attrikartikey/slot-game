@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
       prizesList[_rollSlotController2.centerIndex],
     ];
     _scoreBoardKey.currentState?.updateScore(centerImages);
-    if (spinCounter == 10) {
+    if (spinCounter == 2 || spinCounter == 2) {
       spinCounter = 0; // Reset the counter after the specific spins
     } else {
       spinCounter++;
@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _spinAllSlots() {
     int index = _random.nextInt(prizesList.length);
-    bool shouldMatch = spinCounter == 10;
+    bool shouldMatch = spinCounter == 2 || spinCounter == 2;
 
     _rollSlotController.animateRandomly(
       topIndex: shouldMatch ? index : _random.nextInt(prizesList.length),
